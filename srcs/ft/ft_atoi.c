@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:10 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 15:31:13 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 19:14:47 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(char *str, int max)
 	while (index < max)
 	{
 		number += str[index] - '0';
-		if (index < max-1)
+		if (index < max - 1)
 			number *= 10;
 		index ++;
 	}

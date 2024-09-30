@@ -6,7 +6,7 @@
 /*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:13:14 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 18:55:06 by acabon           ###   ########.fr       */
+/*   Updated: 2024/09/30 19:16:14 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ char	*ft_strdup(char *src)
 	*dest = '\x00';
 	return (tmp);
 }
-/*
-int	main()
-{
-	char *test = ft_strdup("heyy");
-	printf("%s", test);
-}
-*/
