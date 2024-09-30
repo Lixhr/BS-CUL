@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_file.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:12:43 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 12:34:09 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 19:05:32 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	get_file_size(char *path)
 
 char	*get_file(char *path)
 {
-	int	size;
-	char *file;
-	int	fd;
+	char	*file;
+	int		size;
+	int		fd;
 
 	size = get_file_size(path);
 	if (size == -1)

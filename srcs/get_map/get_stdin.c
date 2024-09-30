@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   get_stdin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:13:53 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 18:57:52 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 19:13:00 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes/bsq.h"
 #include "../../includes/ft.h"
@@ -31,11 +30,11 @@ char	*ft_realloc(char *data, char *str, int size, int l)
 	return (res);
 }
 
-char *get_stdin()
+char	*get_stdin(void)
 {
 	char	*data;
 	char	*buffer;
-	int	read_result;
+	int		read_result;
 
 	read_result = 1;
 	buffer = malloc(11);
@@ -47,20 +46,11 @@ char *get_stdin()
 		if (read_result == -1)
 		{
 			free(buffer);
-			return "";
+			return ("");
 		}
 		buffer[read_result] = '\0';
-		data = ft_realloc(data, buffer, 10,  read_result + ft_strlen(data));
+		data = ft_realloc(data, buffer, 10, read_result + ft_strlen(data));
 	}
 	free(buffer);
 	return (data);
-}
-
-int	main()
-{
-
-	char *data;
-	data = print_stdin();
-		printf("%s\n", data);
-	free(data);
 }

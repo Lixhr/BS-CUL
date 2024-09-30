@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_charset.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:40:00 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 15:28:14 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 19:06:47 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	check_doubles_chars(char *str)
 	}
 	return (0);
 }
+
 int	check_printables(char *str)
 {
 	while (*str != '\n')
@@ -39,13 +40,14 @@ int	check_printables(char *str)
 	}
 	return (0);
 }
+
 int	check_numerics(char *str, int index)
 {
 	int	counter;
 
 	counter = 0;
 	while (counter < index)
-	{	
+	{
 		if (!(str[counter] <= '9' && str[counter] >= '0'))
 			return (1);
 		counter ++;
