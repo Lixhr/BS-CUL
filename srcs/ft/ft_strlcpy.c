@@ -3,31 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 08:26:13 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 17:21:01 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 17:34:47 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <bsd/string.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_strlcpy(char *dest, char *src, int size)
 {
-	unsigned int	counter;
+	int	i;
 
-	counter = 0;
-	if (size > 0)
+	if (size == 0)
+		return (ft_strlen(src));
+	i = 0;
+	while (src[i] && i < size - 1)
 	{
-		while (src[counter] && (counter < size -1))
-		{	
-			dest[counter] = src[counter];
-			counter++;
-		}
-		dest[counter] = '\x00';
+		dest[i] = src[i];
+		i++;
 	}
-	while (src[counter])
-		counter ++;
-	return (counter);
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }

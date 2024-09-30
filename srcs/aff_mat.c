@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+
 typedef struct	s_sq_mat
 {
 	int **sq;
@@ -19,6 +20,83 @@ typedef struct	s_max_sq_mat
 	int y;
 	int size;
 } t_max_sq_mat;
+
+int	get_atoi_index(char *str)
+{
+	int	index;
+
+	index = 0;
+	while (str[index] != '\n')
+		index ++;
+	return (index -3);
+}
+
+int	ft_atoi(char *str, int max)
+{
+	short	sign;
+	int		number;
+	int		index;
+
+	number = 0;
+	index = 0;
+	while (index < max)
+	{
+		number += str[index] - '0';
+		if (index < max-1)
+			number *= 10;
+		index ++;
+	}
+	return (number);
+}
+
+
+int	verif_str(char *str, t_sq_mat sq_mat, int *pt, int *nb_col)
+{
+	int	j;
+
+	if (!(*nb_col)  && j)
+		*nb_col = j;
+	j = 0;
+	while (str[*pt] && str[*pt] != '\n')
+	{
+		if (str[*pt] != sq_mat.obstacle_c && str[*pt] != sq_mat.void_c)
+			return (-1);
+		(*pt)++;
+		j++;
+	}
+	if (*nb_col && *nb_col != j)
+		return (-1);
+	if (str[*pt] == '\n')
+		(*pt)++;
+	return (j);
+}
+
+int	check_str(char *str, t_sq_mat *sq_mat)
+{
+	int	i;
+	int	j;
+	int	pt;
+	int	nb_col;
+	nb_col = 0;
+
+	i = 0;
+	j = 0;
+	pt = 0;
+	while(str[pt] != '\n')
+		pt++;
+	while (str[pt])
+	{
+		j = verif_str(str, *sq_mat, &pt, &nb_col);
+		if (j == -1)
+			return (1);
+		i++;
+	}
+	if (ft_atoi(str, get_atoi_index(str)) && ft_atoi(str, get_atoi_index(str)) != i - 1)
+		return (1);
+	sq_mat->x = j + 1;
+	sq_mat->y = i + 1;
+	return (0);
+}
 
 int	ft_strlen(char *str)
 {
@@ -175,13 +253,13 @@ int main(int argc, char const *argv[])
 {
 	t_sq_mat sq_mat;
 	t_max_sq_mat max_sq_mat;
-	sq_mat.x = 6;
-	sq_mat.y = 5;
+	// sq_mat.x = 6;
+	// sq_mat.y = 5;
 	sq_mat.void_c = '.';
 	sq_mat.obstacle_c = 'o';
 	sq_mat.full_c = 'X';
-	int i;
-	int j;
+	// int i;
+	// int j;
 
 	// int temp[5][6] = {
 	// 	{0, 0, 0, 0, 0, 0},
@@ -191,10 +269,11 @@ int main(int argc, char const *argv[])
 	// 	{0, 1, 0, 1, 2, 3},
 	// };
 
-	// char *temp_char = "5.oX\noooooo\noo...\no.o...\noo....\no.o...";
-	char *temp_char = "oo...\n.o...\no....\n.o...";
+	char *temp_char = "5.oX\noooooo\nooo...\no.o...\noo....\no.o...";
+	printf("res = %d\n", check_str(temp_char, &sq_mat));
+	// char *temp_char = "oo...\n.o...\no....\n.o...";
 
-	ft_sq_mat(temp_char, &sq_mat);
+	// ft_sq_mat(temp_char, &sq_mat);
 	
 
 	// sq_mat.sq = (int **)malloc(sq_mat.y * sizeof(int *));
@@ -220,9 +299,9 @@ int main(int argc, char const *argv[])
 
 
 
-	ft_putsq_test(sq_mat);
+	// ft_putsq_test(sq_mat);
 
-	ft_putsq(sq_mat);
+	// ft_putsq(sq_mat);
 
 	return 0;
 }
