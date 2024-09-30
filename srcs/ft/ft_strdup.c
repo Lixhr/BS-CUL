@@ -3,25 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 09:13:14 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/19 19:25:45 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 18:55:06 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-
-int	ft_strlen(char *str)
-{
-	int	counter;
-
-	counter = 0;
-	while (str[counter])
-		counter ++;
-	return (counter);
-}
+#include "../../includes/ft.h"
 
 char	*ft_strdup(char *src)
 {
