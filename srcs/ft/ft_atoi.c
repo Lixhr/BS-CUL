@@ -6,37 +6,18 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:10 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 13:49:54 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:29:25 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*skip_spaces(char *str)
+int	get_atoi_index(char *str, int max)
 {
-	while ((*str >= 9 && *str <= 13) || (*str == ' ' ))
-	{
-		str ++;
-	}
-	return (str);
-}
+	int	index;
 
-short	get_sign(char *str)
-{
-	short	counter;
-
-	counter = 0;
-	while ((*str >= 9 && *str <= 13) || (*str == ' '))
-		str ++;
-	while ((*str == '+' || *str == '-'))
-	{
-		counter += (*str == '-');
-		str ++;
-	}
-	return (counter % 2);
-}
-
-int	is_number(char c)
-{
-	return (c >= '0' && c <= '9');
+	index = 0;
+	while (str[index] != '\n')
+		index ++;
+	return (index -3);
 }
 
 int	ft_atoi(char *str, int max)
