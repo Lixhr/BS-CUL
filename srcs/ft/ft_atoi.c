@@ -6,11 +6,11 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:10 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 15:29:25 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:31:13 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	get_atoi_index(char *str, int max)
+int	get_atoi_index(char *str)
 {
 	int	index;
 

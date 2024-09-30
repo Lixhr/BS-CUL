@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:40:00 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 13:52:23 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:28:14 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int	check_charset(char *str)
 	if (index -1 < 3)
 		return (1);
 	index -= 3;
+	printf("%s", &str[get_atoi_index(str)]);
 	if (check_doubles_chars(&str[index])
 		|| check_printables(&str[index])
 		|| check_numerics(str, index)
