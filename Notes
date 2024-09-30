@@ -1,0 +1,21 @@
+Maximum Sub Square Matrix Dynamic Programming
+
+(Tableau de chiffres)
+
+https://www.youtube.com/watch?v=_Lf1looyJMU
+
+
+
+
+
+TODO:
+
+
+    Recuperation des fichiers, verifier format
+    format structure: tableau, x , y
+    1 vide, 0 obstacle
+    Creation matrice a partir du str
+    Affichage matrice int (dans une structure)
+    libft
+    Makefile auto
+    Resolution algo
