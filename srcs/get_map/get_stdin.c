@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:13:53 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 17:21:17 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 17:30:38 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_realloc(char *str, int size, int l)
 	joined = malloc(sizeof(char) * (size * 2));
 	if (joined == NULL)
 		return (NULL);
-	ft_strlcpy(joined, str);
+	ft_strlcpy(joined, str, l +1);
 	free(str);
 	return (joined);
 }
@@ -42,7 +42,7 @@ void	print_stdin()
 		}
 		data = ft_realloc(data, 10, read_result);
 	}
-	printf("%s", data);
+			printf("%s", data);
 	free(data);
 }
 
@@ -50,6 +50,7 @@ int	main()
 {
 
 	print_stdin();
+			printf("test");
 //	printf("test");
 
 }
