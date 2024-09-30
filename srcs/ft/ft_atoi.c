@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:10 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 12:34:02 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 13:49:54 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,20 @@ int	is_number(char c)
 	return (c >= '0' && c <= '9');
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(char *str, int max)
 {
 	short	sign;
 	int		number;
+	int		index;
 
-	sign = get_sign(str);
-	str = skip_spaces(str);
-	while (*str == '+' || *str == '-')
-		str ++;
 	number = 0;
-	while (is_number(*str))
+	index = 0;
+	while (index < max)
 	{
-		number += *str -48;
-		str ++;
-		if (is_number(*str))
+		number += str[index] - '0';
+		if (index < max-1)
 			number *= 10;
+		index ++;
 	}
-	if (sign)
-		number *= -1;
 	return (number);
 }

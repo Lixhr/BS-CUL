@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:40:00 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 12:37:56 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 13:52:23 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	check_charset(char *str)
 	if (check_doubles_chars(&str[index])
 		|| check_printables(&str[index])
 		|| check_numerics(str, index)
-		|| ft_atoi(str) == 0)
+		|| ft_atoi(str, index) == 0)
 		return (1);
 	return (0);
 }
