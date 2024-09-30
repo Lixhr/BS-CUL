@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:09:06 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 12:59:16 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:25:00 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ char	*get_file(char *path);
 char    *get_map(char *path);
 int		check_charset(char *str);
 void	fill_charset(t_sq_mat *matrix, char *data);
+int	get_atoi_index(char *str);
 
 #endif
