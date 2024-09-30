@@ -120,7 +120,7 @@ int **ft_init_sq(int x, int y)
 	{
 		mat_int[i] = (int *)malloc(x * sizeof(int));
 		j = 0;
-		while ((i == 0 & j < y) || j == 0)
+		while ((i == 0 & j < x) || j == 0)
 		{
 			mat_int[i][j] = 0;
 			j++;
@@ -130,17 +130,24 @@ int **ft_init_sq(int x, int y)
 	return mat_int;
 }
 
-t_sq_mat ft_sq_mat(char *str)
+int min_sq_nb(t_sq_mat sq_mat, int x, int y)
 {
-	t_sq_mat sq_mat;
+	int nb;
+
+	nb = sq_mat.sq[y - 1][x];
+	if (sq_mat.sq[y - 1][x - 1] < nb)
+		nb = sq_mat.sq[y - 1][x - 1];
+	if (sq_mat.sq[y][x - 1] < nb)
+		nb = sq_mat.sq[y][x - 1];
+	return nb;
+}
+
+void ft_sq_mat(char *str, t_sq_mat *sq_mat)
+{
 	int i;
 	int j;
 
-	sq_mat.y = ((*str)++) + '0'; // gerer cas nombres + grand
-	sq_mat.void_c = (*str)++;
-	sq_mat.obstacle_c = (*str)++;
-	sq_mat.full_c = (*str)++;
-	sq_mat.sq = ft_init_sq(6, sq_mat.y); // enlever val en dure
+	(*sq_mat).sq = ft_init_sq((*sq_mat).x, (*sq_mat).y);
 	i = 1;
 	j = 1;
 	while (*str)
@@ -148,20 +155,19 @@ t_sq_mat ft_sq_mat(char *str)
 		if (*str == '\n')
 		{
 			i++;
-			j = 1;
+			j = 0;
 		}
-		else if (*str == sq_mat.obstacle_c)
+		else if (*str == (*sq_mat).obstacle_c)
 		{
-			sq_mat.sq[i][j] = 0;
+			(*sq_mat).sq[i][j] = 0;
 		}
-		else if (*str == sq_mat.void_c)
+		else if (*str == (*sq_mat).void_c)
 		{
-			sq_mat.sq[i][j] = 1;
+			(*sq_mat).sq[i][j] = 1 + min_sq_nb(*sq_mat, j, i);
 		}
 		j++;
 		str++;
 	}
-	return sq_mat;
 }
 
 
@@ -177,17 +183,18 @@ int main(int argc, char const *argv[])
 	int i;
 	int j;
 
-	int temp[5][6] = {
-		{0, 0, 0, 0, 0, 0},
-		{0, 0, 0, 1, 1, 1},
-		{0, 1, 0, 1, 2, 2},
-		{0, 0, 1, 1, 2, 3},
-		{0, 1, 0, 1, 2, 3},
-	};
+	// int temp[5][6] = {
+	// 	{0, 0, 0, 0, 0, 0},
+	// 	{0, 0, 0, 1, 1, 1},
+	// 	{0, 1, 0, 1, 2, 2},
+	// 	{0, 0, 1, 1, 2, 3},
+	// 	{0, 1, 0, 1, 2, 3},
+	// };
 
-	char *temp_char = "5.oX\noooooo\noo...\no.o...\noo....\no.o...";
+	// char *temp_char = "5.oX\noooooo\noo...\no.o...\noo....\no.o...";
+	char *temp_char = "oo...\n.o...\no....\n.o...";
 
-	t_sq_mat sq_mat2 = ft_sq_mat(temp_char);
+	ft_sq_mat(temp_char, &sq_mat);
 	
 
 	// sq_mat.sq = (int **)malloc(sq_mat.y * sizeof(int *));
@@ -204,14 +211,18 @@ int main(int argc, char const *argv[])
 	// 	i++;
 	// }
 
-	ft_putsq_test(sq_mat2);
+	// ft_putsq_test(sq_mat);
 
-	max_sq_mat = ft_max_sq(sq_mat);
-	printf("x = %d, y = %d,\n", max_sq_mat.x, max_sq_mat.y);
-	printf("size = %d\n", max_sq_mat.size);
+	// max_sq_mat = ft_max_sq(sq_mat);
+	// printf("x = %d, y = %d,\n", max_sq_mat.x, max_sq_mat.y);
+	// printf("size = %d\n", max_sq_mat.size);
+
+
+
+
+	ft_putsq_test(sq_mat);
 
 	ft_putsq(sq_mat);
-
 
 	return 0;
 }
