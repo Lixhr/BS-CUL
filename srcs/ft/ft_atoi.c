@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:10 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 19:14:47 by acabon           ###   ########.fr       */
+/*   Updated: 2024/09/30 19:29:43 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	get_atoi_index(char *str)
 
 int	ft_atoi(char *str, int max)
 {
-	short	sign;
 	int		number;
 	int		index;
 

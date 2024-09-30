@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:09:23 by acabon            #+#    #+#             */
-/*   Updated: 2024/09/30 17:13:58 by acabon           ###   ########.fr       */
+/*   Updated: 2024/09/30 19:30:01 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	verif_str(t_sq_mat sq_mat, char *str, int *pt, int *nb_col)
 {
 	int	j;
 
+	j = 0;
 	if (!(*nb_col) && j)
 		*nb_col = j;
-	j = 0;
 	while (str[*pt] && str[*pt] != '\n')
 	{
 		if (str[*pt] != sq_mat.obstacle_c && str[*pt] != sq_mat.void_c)

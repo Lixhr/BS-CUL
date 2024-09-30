@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   get_stdin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:13:53 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 19:13:00 by acabon           ###   ########.fr       */
+/*   Updated: 2024/09/30 19:30:26 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/bsq.h"
 #include "../../includes/ft.h"
 
-char	*ft_realloc(char *data, char *str, int size, int l)
+char	*ft_realloc(char *data, char *str, int l)
 {
 	char	*joined;
 	char	*res;
@@ -49,7 +49,7 @@ char	*get_stdin(void)
 			return ("");
 		}
 		buffer[read_result] = '\0';
-		data = ft_realloc(data, buffer, 10, read_result + ft_strlen(data));
+		data = ft_realloc(data, buffer, read_result + ft_strlen(data));
 	}
 	free(buffer);
 	return (data);

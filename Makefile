@@ -2,23 +2,33 @@ SRC_DIR = ./srcs
 
 CC = gcc
 
-FLAGS += -Wall -Wextra -Werror -I./includes/
+CFLAGS += -Wall -Wextra -Werror -I./includes/
 
-SRCS = 	$(SRC_DIR)/ft_putstr_err.c \
-	$(SRC_DIR)/main.c \
-	$(SRC_DIR)/ft_strlen.c \
-	$(SRC_DIR)/print.c \
-	$(SRC_DIR)/ft_strcmp.c \
+SRCS =	/main.c \
+		/ft/ft_atoi.c \
+		/ft/ft_fill_buffer.c \
+		/ft/ft_strcat.c \
+		/ft/ft_strcpy.c \
+		/ft/ft_strdup.c \
+		/ft/ft_strlcpy.c \
+		/ft/ft_strlen.c \
+		/get_map/check_charset.c \
+		/get_map/check_data.c \
+		/get_map/fill_matrix.c \
+		/get_map/get_file.c \
+		/get_map/get_map.c \
+		/get_map/get_stdin.c \
 
-OBJS = $(SRCS:.c=.o)
+SRCS_FILES = $(addprefix $(SRC_DIR), $(SRCS))
 
-NAME = ft_tail
+OBJS = $(SRCS_FILES:.c=.o)
 
+NAME = bsq
 
 $(NAME):$(OBJS)
-	$(CC) $(FLAGS) -o $(NAME)  $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME)  $(OBJS)
 
-all:	$(NAME)
+all: $(NAME)
 
 clean:
 	rm -f $(OBJS)
@@ -26,5 +36,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
+re: fclean all
 
-.PHONY: fclean clean all 
+.PHONY: fclean clean all re

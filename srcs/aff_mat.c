@@ -1,54 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   aff_mat.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/30 19:17:46 by cbeaufil          #+#    #+#             */
+/*   Updated: 2024/09/30 19:17:53 by cbeaufil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-
-
-typedef struct	s_sq_mat
-{
-	int **sq;
-	int x;
-	int y;
-	char void_c;
-	char obstacle_c;
-	char full_c;
-} t_sq_mat;
-
-typedef struct	s_max_sq_mat
-{
-	int x;
-	int y;
-	int size;
-} t_max_sq_mat;
-
-int	get_atoi_index(char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index] != '\n')
-		index ++;
-	return (index -3);
-}
-
-int	ft_atoi(char *str, int max)
-{
-	short	sign;
-	int		number;
-	int		index;
-
-	number = 0;
-	index = 0;
-	while (index < max)
-	{
-		number += str[index] - '0';
-		if (index < max-1)
-			number *= 10;
-		index ++;
-	}
-	return (number);
-}
-
+#include "../../includes/bsq.h"
 
 int	verif_str(char *str, t_sq_mat sq_mat, int *pt, int *nb_col)
 {

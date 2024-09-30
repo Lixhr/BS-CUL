@@ -10,12 +10,16 @@ https://www.youtube.com/watch?v=_Lf1looyJMU
 
 TODO:
 
-
-    Recuperation des fichiers, verifier format
-    format structure: tableau, x , y
-    1 vide, 0 obstacle
-    Creation matrice a partir du str
-    Affichage matrice int (dans une structure)
-    libft
+    recheck verifier format
+    trouver moyen de faire planter les entreees ->> malloc tous les 100 / 200
+    
+    grille pleine
+    diviser aff matt
+    fonction mere dans le main
+    relire 42 fois le sujet
+    voir tableau plein
     Makefile auto
-    Resolution algo
+    afficher solution
+    
+     1 vide, 0 obstacle
+         reorganiser
