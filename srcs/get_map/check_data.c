@@ -6,7 +6,7 @@
 /*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:09:23 by acabon            #+#    #+#             */
-/*   Updated: 2024/10/01 11:16:16 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 11:30:00 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,20 @@ int	verif_str(t_sq_mat *sq_mat, char *str, int *pt, int *nb_col)
 	int	j;
 	
 	j = 0;
-	if (!(*nb_col) && j)
+	if (!(*nb_col) && sq_mat->x)
 		*nb_col = sq_mat->x;
 	while (str[*pt] && str[*pt] != '\n')
 	{
 		if (str[*pt] != sq_mat->obstacle_c && str[*pt] != sq_mat->void_c)
-			return (-1);
+			{
+				printf("cule");
+				return (-1);
+			}
 		(*pt)++;
 		j++;
 	}
 	if (*nb_col && *nb_col != j)
-		return (1);
+		return (-1);
 	if (str[*pt] == '\n')
 		(*pt)++;
 	if (sq_mat->x == 0)
