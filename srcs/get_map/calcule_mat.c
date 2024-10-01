@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   calcule_mat.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:51:32 by acabon            #+#    #+#             */
-/*   Updated: 2024/10/01 14:01:41 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 14:10:52 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	**ft_init_sq(int x, int y)
 			return (free(mat_int), NULL);
 		}
 		j = -1;
-		while ((i == 0 && ++j < x) || j == 0)
+		while ((i == 0 && ++j < x) || ++j == 0)
 			mat_int[i][j] = 0;
 		i++;
 	}
