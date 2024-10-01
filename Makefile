@@ -20,6 +20,8 @@ SRCS =	/main.c \
 		/get_map/get_file.c \
 		/get_map/get_map.c \
 		/get_map/get_stdin.c \
+		/get_map/put_mat.c \
+		/get_map/calcule_mat.c \
 		/solver/solve.c \
 		
 SRCS_FILES = $(addprefix $(SRC_DIR), $(SRCS))
