@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 08:22:25 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 11:53:30 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:01:58 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ int	solve(char *path)
 	if (check_str(&matrix, map))
 		return (free(map), ft_putstr_error("check_str error\n"));
 
-	
+	printf("%s", map);
 
+
+	
 	free(map);
 	ft_putstr("\n");
 	return (0);

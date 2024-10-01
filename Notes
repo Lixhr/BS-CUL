@@ -11,7 +11,10 @@ https://www.youtube.com/watch?v=_Lf1looyJMU
 TODO:
 
     recheck verifier format
-    trouver moyen de faire planter les entreees ->> malloc tous les 100 / 200
+
+    map 1 char ok ???
+    trouver moyen de faire planter les entreees
+    check ligne = 0
     verifier qu"il n'y ait pas deja un carectere plein dans la map
     grille pleine
     diviser aff matt
@@ -23,3 +26,22 @@ TODO:
     
      1 vide, 0 obstacle
          reorganiser
+
+
+
+◦ Il y a au moins une ligne d’au moins une case.
+
+◦ À la fin de chaque ligne, il y a un retour à la ligne.
+
+◦ Les caractères présent dans la carte doivent être uniquement ceux présenté à
+la première ligne.
+
+◦ La carte est invalide si un caractère manque sur la première ligne, ou si deux
+caractères (parmis vide, plein, et obstacles) sont identiques.
+
+◦ Les caractères peuvent être n’importe quel caractère imprimable, même des
+nombres.
+
+◦ En cas de carte invalide, vous afficherez sur la sortie d’erreur : map error suivi
+d’un retour à la ligne. Le programme passera ensuite au traitement du plateau
+suivant
