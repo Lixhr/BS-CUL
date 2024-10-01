@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   put_mat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:52:39 by acabon            #+#    #+#             */
-/*   Updated: 2024/10/01 11:39:26 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 13:30:23 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,11 @@ void	ft_putsq(t_sq_mat sq_mat)
 		{
 			if (j >= max_sq_mat.x && j < max_sq_mat.x + max_sq_mat.size
 				&& i >= max_sq_mat.y && i < max_sq_mat.y + max_sq_mat.size)
-				write(1, "X", 1);
+				write(1, "X ", 2);
 			else if (sq_mat.sq[i][j] == 0)
-				write(1, "o", 1);
+				write(1, "o ", 2);
 			else
-				write(1, ".", 1);
+				write(1, ". ", 2);
 		}
 		write(1, "\n", 1);
 	}

@@ -11,14 +11,11 @@ https://www.youtube.com/watch?v=_Lf1looyJMU
 TODO:
 
     recheck verifier format
-
-    map 1 char ok ???
     trouver moyen de faire planter les entreees
     check ligne = 0
-    verifier qu"il n'y ait pas deja un carectere plein dans la map
+
     grille pleine
     diviser aff matt
-    fonction mere dans le main
     relire 42 fois le sujet
     voir tableau plein
     Makefile auto

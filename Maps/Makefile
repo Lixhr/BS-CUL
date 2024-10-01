@@ -24,6 +24,13 @@ err:
 	echo ""
 	../bsq Format_error/lines_problems/wrong_char/*
 
+
+	echo ""
+	echo ""
+	echo "---lines-problems : lines full----------"
+	echo ""
+	../bsq Format_error/lines_problems/lines_full/*
+
 ok :
 	../bsq ./OK_maps/*
 

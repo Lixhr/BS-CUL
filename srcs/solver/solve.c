@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   solve.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 08:22:25 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 13:16:41 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 13:30:01 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,12 @@ int	solve(char *path)
 	fill_charset(&matrix, map);
 	if (check_str(&matrix, map))
 		return (free(map), ft_putstr_error("check_str error\n"));
-
-	// printf("%s", map);
-
+	printf("%s\n\n\n", map);
 	ft_sq_mat(map, &matrix);
-
-	printf("\n\n\n\n\n");
-
-
-
-	ft_putsq_test(matrix);
+	//ft_putsq_test(matrix);
 	ft_putsq(matrix);
 	
 	free(map);
-	ft_putstr("\n");
+	ft_putstr("\n\n\n");
 	return (0);
 }
