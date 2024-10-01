@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 12:31:56 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 10:58:53 by cbeaufil         ###   ########.fr       */
+/*   Created: 2024/10/01 10:53:36 by cbeaufil          #+#    #+#             */
+/*   Updated: 2024/10/01 10:58:38 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include "../../includes/bsq.h"
 
-int	ft_atoi(char *str, int max);
-int	ft_strlen(char *str);
-char	*ft_strcat(char *dest, char *src);
-char	*ft_strcpy(char *dest, char *src);
-int	ft_strlcpy(char *dest, char *src, int size);
-char	*ft_strdup(char *src);
-void	ft_fill_buffer(char *str, int size);
-void ft_putstr(char *str);
-int	ft_putstr_error(char *str);
-#endif
+void ft_putstr(char *str)
+{
+	while (*str)
+		write(1, str++, 1);
+}

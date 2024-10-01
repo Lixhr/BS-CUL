@@ -12,6 +12,8 @@ SRCS =	/main.c \
 		/ft/ft_strdup.c \
 		/ft/ft_strlcpy.c \
 		/ft/ft_strlen.c \
+		/ft/ft_putstr.c \
+		/ft/ft_putstr_error.c \
 		/get_map/check_charset.c \
 		/get_map/check_data.c \
 		/get_map/fill_matrix.c \
