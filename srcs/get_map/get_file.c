@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_file.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:12:43 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 19:05:32 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 11:49:58 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char	*get_file(char *path)
 	if (size == -1)
 		return (NULL);
 	file = malloc(sizeof(char) * (size));
+	ft_fill_buffer(file, size);
 	if (file == NULL)
 		return (NULL);
 	fd = open(path, O_RDONLY);

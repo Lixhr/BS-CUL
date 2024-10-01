@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:09:23 by acabon            #+#    #+#             */
-/*   Updated: 2024/10/01 11:38:12 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 11:44:24 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	check_str(t_sq_mat *sq_mat, char *str)
 	i = 0;
 	j = 0;
 	pt = 0;
-	while (str[pt] != '\n')
+	while ( str[pt] && str[pt] != '\n')
 		pt++;
 	while (str[pt])
 	{

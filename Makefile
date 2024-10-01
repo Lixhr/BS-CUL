@@ -2,7 +2,7 @@ SRC_DIR = ./srcs
 
 CC = gcc
 
-CFLAGS += -Wall -Wextra -Werror -I./includes/
+CFLAGS += -g -Wall -Wextra -Werror -I./includes/
 
 SRCS =	/main.c \
 		/ft/ft_atoi.c \
