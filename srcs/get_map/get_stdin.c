@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:13:53 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 19:30:26 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 08:19:39 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@ char	*get_stdin(void)
 	int		read_result;
 
 	read_result = 1;
-	buffer = malloc(11);
-	ft_fill_buffer(buffer, 10);
+	buffer = malloc(201);
+	ft_fill_buffer(buffer, 200);
 	data = ft_strdup("");
 	while (read_result > 0)
 	{
-		read_result = read(0, buffer, 10);
+		read_result = read(0, buffer, 200);
 		if (read_result == -1)
 		{
 			free(buffer);
-			return ("");
+			return (NULL);
 		}
 		buffer[read_result] = '\0';
 		data = ft_realloc(data, buffer, read_result + ft_strlen(data));
