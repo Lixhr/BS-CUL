@@ -3,25 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   check_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:09:23 by acabon            #+#    #+#             */
-/*   Updated: 2024/09/30 19:30:01 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 10:55:58 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/bsq.h"
 
-int	verif_str(t_sq_mat sq_mat, char *str, int *pt, int *nb_col)
+int	verif_str(t_sq_mat *sq_mat, char *str, int *pt, int *nb_col)
 {
 	int	j;
-
-	j = 0;
+	j = sq_mat->x;
 	if (!(*nb_col) && j)
 		*nb_col = j;
 	while (str[*pt] && str[*pt] != '\n')
 	{
-		if (str[*pt] != sq_mat.obstacle_c && str[*pt] != sq_mat.void_c)
+		if (str[*pt] != sq_mat->obstacle_c && str[*pt] != sq_mat->void_c)
 			return (-1);
 		(*pt)++;
 		j++;
@@ -30,6 +29,8 @@ int	verif_str(t_sq_mat sq_mat, char *str, int *pt, int *nb_col)
 		return (-1);
 	if (str[*pt] == '\n')
 		(*pt)++;
+	if (sq_mat->x == 0)
+		sq_mat->x = j;
 	return (j);
 }
 
@@ -40,6 +41,7 @@ int	check_str(t_sq_mat *sq_mat, char *str)
 	int	pt;
 	int	nb_col;
 
+	sq_mat->x = 0;
 	nb_col = 0;
 	i = 0;
 	j = 0;
@@ -48,7 +50,7 @@ int	check_str(t_sq_mat *sq_mat, char *str)
 		pt++;
 	while (str[pt])
 	{
-		j = verif_str(*sq_mat, str, &pt, &nb_col);
+		j = verif_str(sq_mat, str, &pt, &nb_col);
 		if (j == -1)
 			return (1);
 		i++;
