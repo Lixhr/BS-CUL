@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   put_mat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:52:39 by acabon            #+#    #+#             */
-/*   Updated: 2024/10/01 14:00:05 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 14:13:43 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ int	ft_putsq(t_sq_mat sq_mat)
 	max_sq_mat = ft_max_sq(sq_mat);
 	if (max_sq_mat.size == 0)
 		return (1);
-
 	printf("%d %d %d\n", max_sq_mat.size, max_sq_mat.x, max_sq_mat.y);
 	i = 0;
 	while (++i < sq_mat.y)
