@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 17:09:23 by acabon            #+#    #+#             */
-/*   Updated: 2024/10/01 11:44:24 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:07:39 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ int	check_str(t_sq_mat *sq_mat, char *str)
 		&& ft_atoi(str, get_atoi_index(str)) != i - 1)
 		return (1);
 	sq_mat->x = j + 1;
-	sq_mat->y = i + 1;
+	sq_mat->y = i;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:51:32 by acabon            #+#    #+#             */
-/*   Updated: 2024/10/01 11:37:51 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 13:16:31 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	min_sq_nb(t_sq_mat sq_mat, int x, int y)
 {
 	int	nb;
 
+	// printf("%d %d\n", x, y);
+
 	nb = sq_mat.sq[y - 1][x];
 	if (sq_mat.sq[y - 1][x - 1] < nb)
 		nb = sq_mat.sq[y - 1][x - 1];
@@ -52,8 +54,12 @@ void	ft_sq_mat(char *str, t_sq_mat *sq_mat)
 	int	j;
 
 	(*sq_mat).sq = ft_init_sq((*sq_mat).x, (*sq_mat).y);
-	i = 1;
-	j = 1;
+
+	while (*str != '\n')
+		str++;
+
+	i = 0;
+
 	while (*str)
 	{
 		if (*str == '\n')
@@ -66,6 +72,7 @@ void	ft_sq_mat(char *str, t_sq_mat *sq_mat)
 			(*sq_mat).sq[i][j] = 0;
 		}
 		else if (*str == (*sq_mat).void_c)
+		// (*sq_mat).sq[i][j] = 1;
 			(*sq_mat).sq[i][j] = 1 + min_sq_nb(*sq_mat, j, i);
 		j++;
 		str++;

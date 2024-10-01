@@ -6,7 +6,7 @@
 /*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:33:09 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 10:53:58 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 12:59:07 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ void ft_sq_mat(char *str, t_sq_mat *sq_mat);
 int	check_str(t_sq_mat *sq_mat, char *str);
 int	verif_str(t_sq_mat *sq_mat, char *str, int *pt, int *nb_col);
 int	solve(char *path);
+void	ft_putsq_test(t_sq_mat sq_mat);
 #endif
