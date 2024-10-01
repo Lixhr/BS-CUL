@@ -7,11 +7,7 @@ CFLAGS += -g -Wall -Wextra -Werror -I./includes/
 SRCS =	/main.c \
 		/ft/ft_atoi.c \
 		/ft/ft_fill_buffer.c \
-		/ft/ft_strcat.c \
-		/ft/ft_strcpy.c \
-		/ft/ft_strdup.c \
-		/ft/ft_strlcpy.c \
-		/ft/ft_strlen.c \
+		/ft/ft_str.c \
 		/ft/ft_putstr.c \
 		/ft/ft_putstr_error.c \
 		/get_map/check_charset.c \

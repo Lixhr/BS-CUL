@@ -6,12 +6,13 @@
 /*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 01:12:54 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 15:45:56 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 16:26:39 by acabon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
