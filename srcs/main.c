@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:58:52 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 14:09:11 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 17:40:07 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,11 @@ int	main(int argc, char **argv)
 	{
 		file_counter = 0;
 		while (++file_counter < argc)
+		{
 			solve(argv[file_counter]);
+			if (file_counter < argc -1)
+				ft_putstr("\n");
+		}
 	}
+	return (0);
 }
-
-/*
-int	main(int argc, char **argv)
-{
-	t_sq_mat	matrix;
-	char		*str_map;
-
-	str_map = get_map("./map.txt");
-	if (check_charset(str_map))
-		return (1);
-	fill_charset(&matrix, str_map);
-	free(str_map);
-}
-
-
- */

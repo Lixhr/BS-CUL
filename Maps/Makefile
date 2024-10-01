@@ -31,6 +31,12 @@ err:
 	echo ""
 	../bsq Format_error/lines_problems/lines_full/*
 
+	echo ""
+	echo ""
+	echo "---lines-problems : No newline end----------"
+	echo ""
+	../bsq Format_error/lines_problems/no_newline_end/*
+
 ok :
 	../bsq ./OK_maps/*
 
