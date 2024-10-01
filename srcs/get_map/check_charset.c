@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_charset.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:40:00 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 19:06:47 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 10:20:39 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ int	check_charset(char *str)
 	if (index -1 < 3)
 		return (1);
 	index -= 3;
-	printf("%s", &str[get_atoi_index(str)]);
 	if (check_doubles_chars(&str[index])
 		|| check_printables(&str[index])
 		|| check_numerics(str, index)

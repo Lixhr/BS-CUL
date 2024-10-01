@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:58:52 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/09/30 19:18:49 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 08:24:35 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,14 @@
 int	main(int argc, char **argv)
 {
 	int	file_counter;
-	char	*map;
 
 	if (argc == 1)
-	{
-		map = get_map(NULL);
-		printf("%s", map);
-	}
+		solve(NULL);
 	else
 	{
 		file_counter = 0;
 		while (++file_counter < argc)
-		{
-			map = get_map(argv[file_counter]);
-			printf("%s", map);
-		}
+			solve(argv[file_counter]);
 	}
 }
 
