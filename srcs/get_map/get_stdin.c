@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:13:53 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 08:19:39 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:58:36 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,9 @@ char	*get_stdin(void)
 		data = ft_realloc(data, buffer, read_result + ft_strlen(data));
 	}
 	free(buffer);
-	return (data);
+	if (ft_strlen(data))
+		return (data);
+	if (data)
+		free(data);
+	return (NULL);
 }

@@ -6,7 +6,11 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 08:22:25 by cbeaufil          #+#    #+#             */
+
 /*   Updated: 2024/10/01 17:40:19 by cbeaufil         ###   ########.fr       */
+
+/*   Updated: 2024/10/01 15:54:37 by cbeaufil         ###   ########.fr       */
+
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +34,6 @@ int	solve(char *path)
 		return (free_data(map, matrix.sq, matrix.y),
 			ft_putstr_error("map error\n"));
 	free_data(map, matrix.sq, matrix.y);
+	ft_putstr("\n");
 	return (0);
 }
