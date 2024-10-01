@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bsq.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:33:09 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 10:36:05 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 10:40:01 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ int min_sq_nb(t_sq_mat sq_mat, int x, int y);
 void ft_sq_mat(char *str, t_sq_mat *sq_mat);
 int	check_str(t_sq_mat *sq_mat, char *str);
 int	verif_str(t_sq_mat sq_mat, char *str, int *pt, int *nb_col);
-
+int	solve(char *path);
 #endif
