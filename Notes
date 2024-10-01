@@ -12,7 +12,7 @@ TODO:
 
     recheck verifier format
     trouver moyen de faire planter les entreees ->> malloc tous les 100 / 200
-    
+    verifier qu"il n'y ait pas deja un carectere plein dans la map
     grille pleine
     diviser aff matt
     fonction mere dans le main
