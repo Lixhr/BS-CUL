@@ -18,7 +18,8 @@ SRCS =	/main.c \
 		/get_map/get_file.c \
 		/get_map/get_map.c \
 		/get_map/get_stdin.c \
-
+		/solver/solve.c \
+		
 SRCS_FILES = $(addprefix $(SRC_DIR), $(SRCS))
 
 OBJS = $(SRCS_FILES:.c=.o)
