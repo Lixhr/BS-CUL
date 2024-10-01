@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bsq.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabon <acabon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:33:09 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 13:40:35 by acabon           ###   ########.fr       */
+/*   Updated: 2024/10/01 14:21:11 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,6 @@ int	check_str(t_sq_mat *sq_mat, char *str);
 int	verif_str(t_sq_mat *sq_mat, char *str, int *pt, int *nb_col);
 int	solve(char *path);
 void	ft_putsq_test(t_sq_mat sq_mat);
+void	free_matrix(int **matrix, int size);
+void	free_data(char *map, int **matrix, int matrix_size);
 #endif

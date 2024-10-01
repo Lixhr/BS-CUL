@@ -6,7 +6,7 @@
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 08:22:25 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 14:02:28 by cbeaufil         ###   ########.fr       */
+/*   Updated: 2024/10/01 14:27:20 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,11 @@ int	solve(char *path)
 	fill_charset(&matrix, map);
 	if (check_str(&matrix, map))
 		return (free(map), ft_putstr_error("check_str error\n"));
-	printf("%s\n\n\n", map);
 	ft_sq_mat(map, &matrix);
-	//ft_putsq_test(matrix);
 	if (ft_putsq(matrix))
-		return (free(map), ft_putstr_error("full map error\n"));
-
-	free(matrix.sq);
-	free(map);
-	ft_putstr("\n\n\n");
+		return (free_data(map, matrix.sq, matrix.y), 
+			ft_putstr_error("full map error\n"));
+	free_data(map, matrix.sq, matrix.y);
+	ft_putstr("\n");
 	return (0);
 }

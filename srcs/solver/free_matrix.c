@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   free_matrix.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeaufil <cbeaufil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 18:58:52 by cbeaufil          #+#    #+#             */
-/*   Updated: 2024/10/01 14:09:11 by cbeaufil         ###   ########.fr       */
+/*   Created: 2024/10/01 14:10:56 by cbeaufil          #+#    #+#             */
+/*   Updated: 2024/10/01 14:21:03 by cbeaufil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/bsq.h"
 
-int	main(int argc, char **argv)
+void	free_matrix(int **matrix, int size)
 {
-	int	file_counter;
+	int	index;
 
-	if (argc == 1)
-		solve(NULL);
-	else
+	index = 0;
+	while (index != size)
 	{
-		file_counter = 0;
-		while (++file_counter < argc)
-			solve(argv[file_counter]);
+		free(matrix[index]);
+		index ++;
 	}
+	free(matrix);
 }
 
-/*
-int	main(int argc, char **argv)
+void	free_data(char *map, int **matrix, int matrix_size)
 {
-	t_sq_mat	matrix;
-	char		*str_map;
-
-	str_map = get_map("./map.txt");
-	if (check_charset(str_map))
-		return (1);
-	fill_charset(&matrix, str_map);
-	free(str_map);
+	if (matrix_size != -1)
+		free_matrix(matrix, matrix_size);
+	free(map);
 }
-
-
- */

@@ -23,7 +23,8 @@ SRCS =	/main.c \
 		/get_map/put_mat.c \
 		/get_map/calcule_mat.c \
 		/solver/solve.c \
-		
+		/solver/free_matrix.c \
+
 SRCS_FILES = $(addprefix $(SRC_DIR), $(SRCS))
 
 OBJS = $(SRCS_FILES:.c=.o)
